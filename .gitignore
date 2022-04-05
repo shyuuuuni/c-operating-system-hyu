@@ -3,3 +3,6 @@
 
 # Ignore Desktop Service Store file
 **/.DS_Store
+
+# Ignore Object file
+**/*.o
