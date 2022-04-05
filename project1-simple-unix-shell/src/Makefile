@@ -1,9 +1,9 @@
 
-# file   	Makefile
+# file		Makefile
 # usage		$ make : Make Executable
 #			$ ./simple_shell : Execute shell program.
 #			$ make clean : Clear object files and Executable
-# author  	Seunghyun Kim
+# author	Seunghyun Kim
 CC=gcc
 CFLAGS=-g -Wall
 OBJS=simple_shell.o
