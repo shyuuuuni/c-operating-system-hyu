@@ -89,6 +89,7 @@ The final modification to your shell is to allow the output of one command to se
 has the output of the command `ls -l` serve as the input to the less command. Both the ls and less commands will run as separate processes and will communicate using the UNIX `pipe()` function. Perhaps the easiest way to create these separate processes is to have the parent process create the child process (which will execute `ls -l`).This child will also create an other child process (which will execute less) and will establish a pipe between itself and the child process it creates. Implementing pipe functionality will also require using the `dup2()` function as described in the previous section. Finally, although several commands can be chained together using multiple pipes, you can assume that commands will contain only one pipe character and will not be combined with any redirection operators.
 
 ## 명령어 파싱과 오류 처리
+
 이번 프로젝트는 프로세스 생성과 프로세스간 통신을 이해하는 것이 주요 목적이다. 입력된 명령어를 파싱해서 형식에 어긋나는 명령어 오류를 유연하게 처리하는 것은 필요하지만 이번 주제와는 별개의 문제이므로 여기서는 고려하지 않는다. 문제를 간단하게 하기 위해서 Simple Shell 사용자는 다음 형식의 명령어만 올바르게 사용한다고 가정하고 명령어를 스캔한다.
 * 명령어 or 명령어&
 * 명령어 > 파일명 or 명령어 > 파일명 &
@@ -98,6 +99,7 @@ has the output of the command `ls -l` serve as the input to the less command. Bo
 만일 앞 형식을 따르지 않은 명령어가 입력되면 전체를 무시하거나 또는 인식된 부분까지만 처리하고 나머지는 버린다. 다만 명령어는 옵션을 포함할 수 있어야 한다.
 
 ## Best Coding Practices
+
 바람직하지 않은 코딩 스타일에 대한 감점이 있다.
 1. 프로그램의 가독성 (들여쓰기와 형식의 일관성 등)
 2. 코드에대한설명(주석등)
@@ -105,3 +107,7 @@ has the output of the command `ls -l` serve as the input to the less command. Bo
 4. 프로그램의 확장성
 5. 프로그램의 효율성
 6. 기타 바람직한 프로그래밍 원칙에 위배되는 경우 (https://en.wikipedia.org/wiki/Best_coding_practices)
+
+## 참고사항
+
+이 과제는 Operating System Concepts 10판 3장 프로그래밍 프로젝트의 일부이다.
