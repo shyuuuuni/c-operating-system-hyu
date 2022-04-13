@@ -1,4 +1,4 @@
-# hyu-operating-system
+# 운영체제론 (Operating System) 프로젝트
 
 2021년 3학년 1학기에 한양대학교 ERICA에서 수강한 운영체제론(COM2005) 과목의 프로젝트 과제를 정리한 저장소입니다.
 
